@@ -1,0 +1,19 @@
+=MarkinMessenger
+
+MarkinMessenger is an extension for Papcerlip attached models. It provides an uncompressing function for zipfiles and 
+a watermarking the zip images.  
+
+
+==Example
+
+In your model:
+
+	class Asset < ActiveRecord::Base
+	
+		print_with_watermark {:zip => {:compress => :false}, :style => {:size => "200x200"}, :watermark => {:text => "Lorem ipsum"},:storage =>{:folder => "public/foobar"}
+		 											:thumb => {:printover => "vorschau"}}
+
+	end
+
+
+Copyright (c) 2009 [Daniel Schmidt], released under the MIT license

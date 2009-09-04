@@ -1,0 +1,10 @@
+require 'markin_messenger/markin_messenger'
+require 'markin_messenger/paperclip'
+require 'markin_messenger/markin_image'
+require 'markin_messenger/watermark'
+require 'markin_messenger/compress'
+require 'markin_messenger/uncompress'
+require 'markin_messenger/thumbnail'
+require 'markin_messenger/file'
+
+require 'markin_messenger/unzipped_image'
