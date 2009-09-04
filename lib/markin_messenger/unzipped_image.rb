@@ -13,7 +13,7 @@ comment here
 =end
 
 class UnzippedImage < ActiveRecord::Base
- include CryptieHasher
+ #include CryptieHasher
  
  belongs_to :image_set,:class_name => "ImageSet", :foreign_key => "asset_id"
  
