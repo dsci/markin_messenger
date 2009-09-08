@@ -11,6 +11,8 @@ module MarkinMessenger
         assets = []
         thumb_dir = "#{RAILS_ROOT}/#{storage_folder}/thumbs/"
         
+        logger.debug "unzip_dir #{thumb_dir}"
+        
         FileUtils.mkdir_p(thumb_dir)
         
         Zip::ZipFile.open(self.file_name) do |z|

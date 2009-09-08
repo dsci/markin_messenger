@@ -42,12 +42,20 @@ module MarkinMessenger
             public_storage = "public"
             storage_folder = ""
             
-            if opt.has_key?("public") 
+            if opt.has_key?(:public) 
               public_storage = opt[:public].eql?("true") ? "public" : ""  
             end
             
+            if opt.has_key?(:storage_folder)
+              storage_folder = opt[:storage_folder]
+            end
+            
+            dir = "#{RAILS_ROOT}/#{public_storage}/#{storage_folder}"
+            FileUtils.mkdir(dir) unless File.exists?(dir)
+            
             define_method(:storage_folder) do
-              return "#{RAILS_ROOT}/#{public_storage}/#{storage_folder}"
+              logger.debug "storage_folder for unzipped #{RAILS_ROOT}/#{public_storage}/#{storage_folder}/"
+              return "#{dir}/"
             end
             
             define_method(:styles) do 
