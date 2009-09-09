@@ -51,7 +51,7 @@ module MarkinMessenger
             end
             
             dir = "#{RAILS_ROOT}/#{public_storage}/#{storage_folder}"
-            FileUtils.mkdir(dir) unless File.exists?(dir)
+            #FileUtils.mkdir(dir) unless File.exists?(dir)
             
             define_method(:storage_folder) do
               logger.debug "storage_folder for unzipped #{RAILS_ROOT}/#{public_storage}/#{storage_folder}/"
