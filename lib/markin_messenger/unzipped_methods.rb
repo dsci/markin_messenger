@@ -38,6 +38,8 @@ module MarkinMessenger
            FileUtils.mv(self.filepath, self.storage_folder)
            basename = File.basename(self.filepath)
            self.filepath = "#{self.storage_folder}/#{basename}"
+         rescue
+           # then something is wrong the moving. 
          end
         
       end
