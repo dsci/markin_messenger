@@ -25,7 +25,7 @@ module MarkinMessenger
            
            public_dir = self.storage_folder.split("public")[1]
            
-           return "#{public_dir}/#{basename}"
+           return "/images/#{public_dir}/#{basename}"
          end
 
          def destroy_file
